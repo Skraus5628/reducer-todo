@@ -6,10 +6,19 @@ import { useInput } from './Components/useInput';
 import styled from 'styled-components';
 import './App.css';
 
+
+// Styles
+
 const BodyBox = styled.body`
   background-color: black;
   color: white;
 `
+const Container = styled.section`
+display: flex;
+flex-direction: column;
+align-items: center;
+`
+
 
 
 function App() {
@@ -26,12 +35,13 @@ function App() {
 
   return (
    
-    
+    <Container>
     <div className='container'>
       <h1 className="title">ToDo List</h1>
       <TodoForm todoInput={todoInput} handleTodoInput={handleTodoInput} handleSubmit={handleSubmit} dispatch={dispatch}/>
       <TodoList todoList={todoList} dispatch={dispatch}/>
     </div>
+    </Container>
     
   )
 }
