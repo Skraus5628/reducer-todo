@@ -9,16 +9,22 @@ import './App.css';
 
 // Styles
 
-const BodyBox = styled.body`
-  background-color: black;
-  color: white;
-`
+// const BodyBox = styled.body`
+//   background-color: black;
+//   color: white;
+// `
 const Container = styled.section`
 display: flex;
 flex-direction: column;
-align-items: center;
-`
 
+// align-items: center;
+
+`
+const FormBox = styled.form`
+display: flex;
+margin-left: 25%;
+
+`
 
 
 function App() {
@@ -38,7 +44,12 @@ function App() {
     <Container>
     <div className='container'>
       <h1 className="title">ToDo List</h1>
-      <TodoForm todoInput={todoInput} handleTodoInput={handleTodoInput} handleSubmit={handleSubmit} dispatch={dispatch}/>
+      <FormBox>
+      <TodoForm todoInput={todoInput} 
+      handleTodoInput={handleTodoInput} 
+      handleSubmit={handleSubmit} 
+      dispatch={dispatch}/>
+      </FormBox>
       <TodoList todoList={todoList} dispatch={dispatch}/>
     </div>
     </Container>
